@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import EstilosGlobais from "./Componentes/EstilosGlobais";
+import EstilosGlobais from "./Componentes/EstilosGlobais/Index";
 import Cabecalho from "./Componentes/Cabecalho/Index";
 import BarraLateral from "./Componentes/BarraLateral/Index";
 import Banner from "./Componentes/BannerTitulo/Index";
