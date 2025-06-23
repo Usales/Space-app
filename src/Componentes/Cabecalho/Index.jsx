@@ -12,11 +12,11 @@ const HeaderEstilizado = styled.header`
     }
 `
 
-const Cabecalho = () =>{
+const Cabecalho = ({ busca, setBusca }) =>{
     return(
     <HeaderEstilizado>
         <img src={logo} alt='Logo' />
-        <CampoTexto />
+        <CampoTexto value={busca} onChange={e => setBusca(e.target.value)} />
     </HeaderEstilizado>
     )
 }

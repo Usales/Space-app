@@ -2,6 +2,16 @@
 
 Um projeto React moderno que simula uma galeria de fotos espaciais, desenvolvido durante o curso da Alura.
 
+## 🆕 Alterações Recentes
+
+- Filtro de busca por tags totalmente funcional e visualmente destacado.
+- Barra de pesquisa global no cabeçalho, filtrando fotos em tempo real por título.
+- Filtro combinado: busca por texto + tags.
+- Novas rotas: "Mais Curtidas" e "Surpreenda-me", acessíveis pela barra lateral.
+- Página "Temas" com cards visuais e imagens temáticas.
+- Melhoria visual dos cards (efeito hover, responsividade, acessibilidade).
+- Componentização aprimorada e centralização do estado de busca.
+
 ## 🛠️ Tecnologias Utilizadas
 
 - React
@@ -18,8 +28,11 @@ Um projeto React moderno que simula uma galeria de fotos espaciais, desenvolvido
 - Modal para visualização ampliada das imagens
 - Sistema de favoritos
 - Filtros por tags
+- Busca por texto no cabeçalho
+- Filtro combinado (tags + texto)
 - Seção de fotos populares
 - Interface moderna e intuitiva
+- Rotas para páginas temáticas
 
 ## 🎨 UI/UX
 
@@ -27,7 +40,7 @@ O projeto foi desenvolvido seguindo princípios modernos de UI/UX:
 
 - **Design System**: Utilização de cores, fontes e espaçamentos consistentes
 - **Feedback Visual**: Animações e transições suaves para melhor interatividade
-- **Acessibilidade**: Estrutura semântica e contraste adequado
+- **Acessibilidade**: Estrutura semântica, contraste adequado e textos alternativos em imagens
 - **Responsividade**: Layout adaptável para diferentes tamanhos de tela
 
 ## 🚀 Instalação
@@ -57,6 +70,8 @@ space-app/
 │   │   ├── BannerTitulo/
 │   │   ├── Cabecalho/
 │   │   ├── Galeria/
+│   │   ├── Temas/
+│   │   ├── Sobre/
 │   │   └── Rodape/
 │   ├── App.jsx
 │   └── main.jsx
@@ -74,6 +89,7 @@ space-app/
 
 ### Estado e Gerenciamento
 - Uso de useState para gerenciamento local
+- Estado centralizado para busca e filtros
 - Estado para controlar favoritos e modais
 
 ### Estilização
@@ -85,6 +101,13 @@ space-app/
 - Lazy loading de imagens
 - Componentes otimizados
 - Transições suaves
+
+### Boas Práticas Adotadas
+- Separação clara de responsabilidades entre componentes
+- Navegação por rotas com React Router
+- Acessibilidade: uso de alt em imagens, contraste e navegação por teclado
+- Responsividade aprimorada
+- Código limpo e organizado
 
 ## 🎨 Design
 

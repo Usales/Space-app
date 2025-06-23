@@ -21,6 +21,12 @@ const ImagemPopular = styled.img`
     }
 `;
 
+const Descricao = styled.p`
+    color: #fff;
+    font-size: 0.98rem;
+    margin: 8px 0 24px 0;
+`;
+
 const Populares = () =>{
     const fotosPopulares = [
         {
@@ -52,13 +58,15 @@ const Populares = () =>{
 
     return(
         <PopularesContainer>
-            <Titulo $alinhamento="center">Populares</Titulo>
+            <Titulo $alinhamento="center">Mais Curtidas</Titulo>
             {fotosPopulares.map(foto => (
-                <ImagemPopular 
-                    key={foto.id}
-                    src={foto.path}
-                    alt={foto.titulo}
-                />
+                <div key={foto.id}>
+                    <ImagemPopular 
+                        src={foto.path}
+                        alt={foto.titulo}
+                    />
+                    <Descricao>{foto.descricao}</Descricao>
+                </div>
             ))}
         </PopularesContainer>
     )

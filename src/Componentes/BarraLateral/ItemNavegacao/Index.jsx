@@ -1,30 +1,26 @@
 import styled from "styled-components"
 
-const ItemListaEstilizado = styled.li`
-    font-size: 24px;
-    line-height: 29px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    color: ${props => props.$ativo ? '#7B78E5' : '#D9D9D9'};    
+const Item = styled.li`
     display: flex;
     align-items: center;
-    gap: 22px;
-    margin: 8px 0;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: ${props => props.$ativo ? '#154580' : 'transparent'};
+    color: ${props => props.$ativo ? '#fff' : '#b0c4de'};
+    font-weight: ${props => props.$ativo ? 'bold' : 'normal'};
     cursor: pointer;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-
+    transition: background 0.2s;
     &:hover {
-        transform: translateY(-5px);
+        background: #15458044;
     }
 `
 
-const ItemNavegacao = ({children, iconeAtivo, iconeInativo, ativo = false}) => {
-    return <ItemListaEstilizado $ativo={ativo}>
-        <img src={ativo ? iconeAtivo : iconeInativo} alt="" />
+const ItemNavegacao = ({ iconeAtivo, iconeInativo, ativo, children }) => (
+    <Item $ativo={ativo}>
+        <img src={ativo ? iconeAtivo : iconeInativo} alt="" width={24} height={24} />
         {children}
-    </ItemListaEstilizado>
-}
+    </Item>
+)
 
 export default ItemNavegacao

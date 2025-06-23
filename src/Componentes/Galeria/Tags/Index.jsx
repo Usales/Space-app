@@ -23,19 +23,28 @@ const Tag = styled.button`
     padding: 12px;
     box-sizing: border-box;
     border: 2px solid transparent;
-
+    outline: none;
+    ${({ $ativa }) => $ativa && `border-color: #C98CF1; background: #154580;`}
     &:hover {
         border-color: #C98CF1;
         transform: translateY(-5px);
     }
 `;
 
-const Tags = () => { 
+const Tags = ({ tagAtiva, aoSelecionarTag }) => { 
     return (
         <TagTituloEstilizado>
             <p>Busque por tags:</p>
             <TagsContainer>
-                {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+                {tags.map(tag => (
+                    <Tag
+                        key={tag.id}
+                        $ativa={tagAtiva === tag.id}
+                        onClick={() => aoSelecionarTag(tag.id)}
+                    >
+                        {tag.titulo}
+                    </Tag>
+                ))}
             </TagsContainer>
         </TagTituloEstilizado>
     );

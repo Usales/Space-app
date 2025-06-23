@@ -28,9 +28,10 @@ const ListaFotos = styled.ul`
   width: 100%;
 `
 
-const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
+const Galeria = ({ fotos = [], busca = "", aoFotoSelecionada }) => {
   const [fotosFavoritas, setFotosFavoritas] = useState([]);
   const [fotoExpandida, setFotoExpandida] = useState(null);
+  const [tagAtiva, setTagAtiva] = useState(14); // 14 = Todas
 
   const aoFavoritar = (foto) => {
     if (fotosFavoritas.find(fav => fav.id === foto.id)) {
@@ -48,12 +49,18 @@ const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
     }
   };
 
+  const fotosFiltradas = fotos.filter(foto => {
+    const correspondeTag = tagAtiva === 14 || foto.tagId === tagAtiva;
+    const correspondeBusca = foto.titulo.toLowerCase().includes(busca.toLowerCase());
+    return correspondeTag && correspondeBusca;
+  });
+
   return (
     <GaleriaContainer>
       <SecaoFotos>
-        <Tags />
+        <Tags tagAtiva={tagAtiva} aoSelecionarTag={setTagAtiva} />
         <ListaFotos>
-          {fotos.map((foto) => (
+          {fotosFiltradas.map((foto) => (
             <li key={foto.id}>
               <Figure
                 $expandida={fotoExpandida?.id === foto.id}

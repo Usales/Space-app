@@ -4,10 +4,15 @@ import Cabecalho from "./Componentes/Cabecalho/Index";
 import BarraLateral from "./Componentes/BarraLateral/Index";
 import Banner from "./Componentes/BannerTitulo/Index";
 import Galeria from "./Componentes/Galeria/Index";
+import Sobre from "./Componentes/Sobre/Index";
+import Temas from "./Componentes/Temas/Index";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import fotos from "./fotos.json"
 import { useState } from "react";
 import Rodape from "./Componentes/Rodape/Index";
+import MaisCurtidas from "./Componentes/MaisCurtidas/Index";
+import SurpreendaMe from "./Componentes/SurpreendaMe/Index";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -42,21 +47,34 @@ const ConteudoPrincipal = styled.div`
 const App = () => {
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(1)
+  const [busca, setBusca] = useState("");
   return (
     <FundoGradiente>
       <EstilosGlobais />
       <AppContainer>
-        <Cabecalho />
-        <MainContainer>
-          <BarraLateral />
-          <ConteudoPrincipal>
-            <Banner
-              texto="Navegue pela galeria"
-              backgroundImage="/imagens/banner.png"
-            />
-            <Galeria fotos={fotosDaGaleria}/>
-          </ConteudoPrincipal>
-        </MainContainer>
+        <Router>
+          <Cabecalho busca={busca} setBusca={setBusca} />
+          <MainContainer>
+            <BarraLateral />
+            <ConteudoPrincipal>
+              <Routes>
+                <Route path="/" element={
+                  <>
+                    <Banner
+                      texto="Navegue pela galeria"
+                      backgroundImage="/imagens/banner.png"
+                    />
+                    <Galeria fotos={fotosDaGaleria} busca={busca}/>
+                  </>
+                } />
+                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/temas" element={<Temas />} />
+                <Route path="/mais-curtidas" element={<MaisCurtidas />} />
+                <Route path="/surpreenda-me" element={<SurpreendaMe />} />
+              </Routes>
+            </ConteudoPrincipal>
+          </MainContainer>
+        </Router>
       </AppContainer>
       <Rodape />
     </FundoGradiente>
