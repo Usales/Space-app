@@ -9,6 +9,7 @@ const Container = styled.section`
   background: #0b1a2f;
   border-radius: 16px;
   box-shadow: 0 4px 24px #0002;
+  animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
 `;
 const Titulo = styled.h1`
   color: #fff;

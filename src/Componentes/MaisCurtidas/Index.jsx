@@ -7,6 +7,7 @@ const Container = styled.section`
   background: #0b1a2f;
   border-radius: 16px;
   box-shadow: 0 4px 24px #0002;
+  animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
 `;
 const Titulo = styled.h1`
   color: #fff;
@@ -22,12 +23,18 @@ const Imagem = styled.img`
   border-radius: 16px;
   margin: 0 auto 8px auto;
   display: block;
+  animation: slideDownFade 1.3s cubic-bezier(0.23, 1, 0.32, 1);
 `;
 const Descricao = styled.p`
   color: #fff;
   font-size: 1.05rem;
   margin-bottom: 32px;
   text-align: center;
+`;
+const ImagemContainer = styled.div`
+  animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: ${props => props.delay || 0}s;
+  animation-fill-mode: both;
 `;
 
 const fotosPopulares = [
@@ -66,11 +73,11 @@ const fotosPopulares = [
 const MaisCurtidas = () => (
   <Container>
     <Titulo>Mais Curtidas</Titulo>
-    {fotosPopulares.map(foto => (
-      <div key={foto.id}>
+    {fotosPopulares.map((foto, idx) => (
+      <ImagemContainer key={foto.id} delay={0.1 * idx}>
         <Imagem src={foto.path} alt={foto.titulo} />
         <Descricao>{foto.descricao}</Descricao>
-      </div>
+      </ImagemContainer>
     ))}
   </Container>
 );

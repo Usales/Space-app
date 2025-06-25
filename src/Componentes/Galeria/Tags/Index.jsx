@@ -11,6 +11,16 @@ const TagsContainer = styled.div`
     display: flex;
     gap: 24px;
     margin-top: 24px;
+
+    @media (max-width: 768px) {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+    }
 `;
 
 const Tag = styled.button`

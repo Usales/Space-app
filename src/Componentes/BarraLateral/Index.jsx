@@ -4,15 +4,42 @@ import { Link, useLocation } from "react-router-dom";
 
 const BarraLateralEstilizada = styled.aside`
   width: 212px;
-  height: 200px;
   padding: 0px;
   box-sizing: border-box;
+  animation: slideDownFade 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1rem 0;
+  }
 `;
 
 const ListaEstilizada = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 1rem;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+    }
+  }
 `;
 
 const BarraLateral = () => {

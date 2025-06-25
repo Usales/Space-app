@@ -8,6 +8,10 @@ const GaleriaContainer = styled.section`
   display: flex;
   gap: 24px;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `
 
 const SecaoFotos = styled.section`
@@ -16,6 +20,12 @@ const SecaoFotos = styled.section`
   flex-direction: column;
   gap: 24px;
   min-width: 0;
+  animation: slideDownFade 1.3s cubic-bezier(0.23, 1, 0.32, 1);
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 `
 
 const ListaFotos = styled.ul`
@@ -24,8 +34,18 @@ const ListaFotos = styled.ul`
   gap: 24px;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
+  justify-items: center;
+  animation: slideDownFade 1.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 `
 
 const Galeria = ({ fotos = [], busca = "", aoFotoSelecionada }) => {

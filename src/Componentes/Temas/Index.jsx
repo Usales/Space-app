@@ -43,6 +43,7 @@ const Container = styled.section`
   padding: 32px;
   max-width: 1200px;
   margin: 40px auto;
+  animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
 `;
 const Titulo = styled.h1`
   color: #fff;
@@ -64,6 +65,7 @@ const Card = styled.article`
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s, box-shadow 0.2s;
+  animation: slideDownFade 1.2s cubic-bezier(0.23, 1, 0.32, 1);
   &:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 8px 32px #0005;

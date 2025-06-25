@@ -22,19 +22,37 @@ const FundoGradiente = styled.div`
     #154580 96.76%
   );
   width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 `;
 
 const AppContainer = styled.div`
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 1440px;
 `;
 
 const MainContainer = styled.main`
   display: flex;
   gap: 24px;
   padding: 0 24px;
+  width: 100%;
+  max-width: 100vw;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+  }
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 const ConteudoPrincipal = styled.div`
@@ -57,21 +75,23 @@ const App = () => {
           <MainContainer>
             <BarraLateral />
             <ConteudoPrincipal>
-              <Routes>
-                <Route path="/" element={
-                  <>
-                    <Banner
-                      texto="Navegue pela galeria"
-                      backgroundImage="/imagens/banner.png"
-                    />
-                    <Galeria fotos={fotosDaGaleria} busca={busca}/>
-                  </>
-                } />
-                <Route path="/sobre" element={<Sobre />} />
-                <Route path="/temas" element={<Temas />} />
-                <Route path="/mais-curtidas" element={<MaisCurtidas />} />
-                <Route path="/surpreenda-me" element={<SurpreendaMe />} />
-              </Routes>
+              <Wrapper>
+                <Routes>
+                  <Route path="/" element={
+                    <>
+                      <Banner
+                        texto="Navegue pela galeria"
+                        backgroundImage="/imagens/banner.png"
+                      />
+                      <Galeria fotos={fotosDaGaleria} busca={busca}/>
+                    </>
+                  } />
+                  <Route path="/sobre" element={<Sobre />} />
+                  <Route path="/temas" element={<Temas />} />
+                  <Route path="/mais-curtidas" element={<MaisCurtidas />} />
+                  <Route path="/surpreenda-me" element={<SurpreendaMe />} />
+                </Routes>
+              </Wrapper>
             </ConteudoPrincipal>
           </MainContainer>
         </Router>

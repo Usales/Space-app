@@ -8,6 +8,7 @@ const Container = styled.section`
   max-width: 900px;
   margin: 40px auto;
   box-shadow: 0 4px 24px #0002;
+  animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
 `;
 const Titulo = styled.h1`
   font-size: 2.5rem;

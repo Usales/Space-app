@@ -5,6 +5,17 @@ const BannerContainer = styled.div`
     align-items: center;
     gap: 24px;
     margin-bottom: 24px;
+    width: 100%;
+    justify-content: center;
+    animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+
+    @media (max-width: 768px) {
+        gap: 0;
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
 `;
 
 const FigureEstilizada = styled.figure`
@@ -19,6 +30,9 @@ const FigureEstilizada = styled.figure`
     max-width: 100%;
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
 `;
 
 const TituloEstilizado = styled.h1`
@@ -29,6 +43,11 @@ const TituloEstilizado = styled.h1`
     max-width: 300px;
     padding: 0 64px;
     margin: 0;
+    text-align: center;
+    @media (max-width: 768px) {
+        padding: 0 16px;
+        font-size: 28px;
+    }
 `;
 
 const Banner = ({ texto, backgroundImage }) => {

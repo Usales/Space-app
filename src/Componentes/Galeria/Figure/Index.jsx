@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
 const FigureEstilizado = styled.figure`
-    width: 460px;
+    width: 500px;
     max-width: 100%;
     margin: 0;
     display: flex;
@@ -12,6 +12,10 @@ const FigureEstilizado = styled.figure`
 
     &:hover {
         transform: translateY(-10px);
+    }
+
+    @media (max-width: 400px) {
+        width: 340px;
     }
 `;
 

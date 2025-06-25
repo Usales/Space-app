@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 const EstilosGlobais = createGlobalStyle`
-html {
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
-}
-body {
-  margin: 0;
-  min-height: 100vh;
 }
 main {
   display: block;
@@ -143,6 +143,17 @@ template {
 }
 [hidden] {
   display: none;
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 `
 export default EstilosGlobais
