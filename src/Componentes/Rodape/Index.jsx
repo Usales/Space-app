@@ -7,6 +7,17 @@ const RodapeContainer = styled.footer`
     text-align: center;
     margin-top: 48px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        padding: 24px 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 12px;
+        margin-top: 24px;
+    }
 `;
 
 const TextoRodape = styled.p`
@@ -16,6 +27,14 @@ const TextoRodape = styled.p`
     margin: 0;
     font-family: 'GandhiSansRegular', sans-serif;
     opacity: 0.8;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
 `;
 
 const RedesSociais = styled.div`
@@ -23,6 +42,16 @@ const RedesSociais = styled.div`
     justify-content: center;
     gap: 32px;
     margin-top: 24px;
+
+    @media (max-width: 768px) {
+        gap: 24px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px;
+        margin-top: 16px;
+    }
 `;
 
 const BotaoRedeSocial = styled.a`
@@ -31,6 +60,14 @@ const BotaoRedeSocial = styled.a`
     transition: all 0.3s ease;
     cursor: pointer;
     opacity: 0.8;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 22px;
+    }
 
     &:hover {
         color: #C98CF1;
@@ -46,6 +83,14 @@ const LinkFigma = styled.a`
     font-family: 'GandhiSansBold', sans-serif;
     font-size: 18px;
     opacity: 0.8;
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 15px;
+    }
 
     &:hover {
         color: #C98CF1;
