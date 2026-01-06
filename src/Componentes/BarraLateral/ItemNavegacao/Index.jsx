@@ -9,19 +9,35 @@ const Item = styled.li`
     color: ${props => props.$ativo ? '#7B78E5' : '#D9D9D9'};
     font-family: ${props => props.$ativo ? 'GandhiSansBold' : 'GandhiSansRegular'};
     
+    img {
+        flex-shrink: 0;
+    }
+    
+    @media (max-width: 1024px) {
+        gap: 18px;
+        font-size: 19px;
+    }
+
     @media (max-width: 768px) {
-        font-size: 18px;
-        gap: 16px;
+        font-size: 16px;
+        gap: 12px;
+        padding: 8px 12px;
+        white-space: nowrap;
     }
 
     @media (max-width: 480px) {
-        font-size: 16px;
+        font-size: 14px;
         gap: 10px;
         padding: 8px 10px;
 
-        & span { /* Supondo que o texto (children) seja um span */
+        & span {
             display: none; 
         }
+    }
+
+    @media (max-width: 320px) {
+        padding: 6px 8px;
+        gap: 8px;
     }
 `
 
