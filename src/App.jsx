@@ -31,27 +31,43 @@ const AppContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   max-width: 1440px;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 12px;
+  }
 `;
 
 const MainContainer = styled.main`
   display: flex;
   gap: 24px;
-  padding: 0 24px;
+  padding: 0;
   width: 100%;
   max-width: 100vw;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: 0;
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 12px;
   }
 `;
 
 const Wrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
+  padding: 0;
+
   @media (max-width: 768px) {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0;
   }
 `;
 
