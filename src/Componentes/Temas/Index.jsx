@@ -44,16 +44,47 @@ const Container = styled.section`
   max-width: 1200px;
   margin: 40px auto;
   animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    margin: 24px auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+    margin: 16px auto;
+  }
 `;
 const Titulo = styled.h1`
   color: #fff;
   font-size: 2.2rem;
   margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
 `;
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 `;
 const Card = styled.article`
   background: linear-gradient(160deg, #112244 60%, #154580 100%);
@@ -66,6 +97,18 @@ const Card = styled.article`
   align-items: center;
   transition: transform 0.2s, box-shadow 0.2s;
   animation: slideDownFade 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
   &:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 8px 32px #0005;
@@ -81,6 +124,18 @@ const Imagem = styled.img`
   box-shadow: 0 2px 12px #0004;
   transition: transform 0.3s;
 
+  @media (max-width: 768px) {
+    height: 160px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 480px) {
+    height: 140px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
   ${Card}:hover & {
     transform: scale(1.10);
   }
@@ -88,10 +143,28 @@ const Imagem = styled.img`
 const Nome = styled.h2`
   font-size: 1.25rem;
   margin: 8px 0 8px 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.15rem;
+    margin: 6px 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.05rem;
+    margin: 4px 0;
+  }
 `;
 const Desc = styled.p`
   font-size: 1rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Temas = () => (

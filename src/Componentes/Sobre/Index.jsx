@@ -9,15 +9,50 @@ const Container = styled.section`
   margin: 40px auto;
   box-shadow: 0 4px 24px #0002;
   animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    margin: 24px auto;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+    margin: 16px auto;
+    border-radius: 10px;
+  }
 `;
 const Titulo = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
 `;
 const Texto = styled.p`
   font-size: 1.2rem;
   line-height: 1.7;
   margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
 `;
 const Imagem = styled.img`
   width: 100%;
@@ -25,6 +60,16 @@ const Imagem = styled.img`
   display: block;
   margin: 32px auto 0 auto;
   border-radius: 12px;
+
+  @media (max-width: 768px) {
+    margin: 24px auto 0 auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 480px) {
+    margin: 16px auto 0 auto;
+    border-radius: 8px;
+  }
 `;
 
 const Sobre = () => (
