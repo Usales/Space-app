@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const RodapeContainer = styled.footer`
-    background: rgba(0, 22, 52, 0.5);
+    background: #1E1F2C;
     padding: 32px;
     text-align: center;
     margin-top: 48px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(124,93,255,0.2);
     box-sizing: border-box;
 
     @media (max-width: 768px) {
@@ -21,11 +21,10 @@ const RodapeContainer = styled.footer`
 `;
 
 const TextoRodape = styled.p`
-    color: #FFFFFF;
+    color: #E1E1E1;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
-    font-family: 'GandhiSansRegular', sans-serif;
     opacity: 0.8;
 
     @media (max-width: 768px) {
@@ -55,7 +54,7 @@ const RedesSociais = styled.div`
 `;
 
 const BotaoRedeSocial = styled.a`
-    color: #FFFFFF;
+    color: #E1E1E1;
     font-size: 28px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -70,17 +69,17 @@ const BotaoRedeSocial = styled.a`
     }
 
     &:hover {
-        color: #C98CF1;
+        color: #7C5DFF;
         transform: translateY(-5px);
         opacity: 1;
     }
 `;
 
 const LinkFigma = styled.a`
-    color: #FFFFFF;
+    color: #E1E1E1;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-family: 'GandhiSansBold', sans-serif;
+    font-weight: 600;
     font-size: 18px;
     opacity: 0.8;
 
@@ -93,7 +92,7 @@ const LinkFigma = styled.a`
     }
 
     &:hover {
-        color: #C98CF1;
+        color: #7C5DFF;
         opacity: 1;
     }
 `;

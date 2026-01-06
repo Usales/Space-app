@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  background: #0b1a2f;
-  color: #fff;
+  background: #1E1F2C;
+  color: #E1E1E1;
   padding: 32px;
   border-radius: 16px;
   max-width: 900px;
   margin: 40px auto;
-  box-shadow: 0 4px 24px #0002;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
   animation: slideDownFade 1.1s cubic-bezier(0.23, 1, 0.32, 1);
   box-sizing: border-box;
 

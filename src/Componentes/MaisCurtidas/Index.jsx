@@ -61,7 +61,7 @@ const Imagem = styled.img`
   }
 `;
 const Descricao = styled.p`
-  color: #fff;
+  color: #E1E1E1;
   font-size: 1.05rem;
   margin-bottom: 32px;
   text-align: center;

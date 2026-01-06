@@ -87,11 +87,12 @@ const Grid = styled.div`
   }
 `;
 const Card = styled.article`
-  background: linear-gradient(160deg, #112244 60%, #154580 100%);
+  background: #1E1F2C;
   border-radius: 16px;
   padding: 24px 20px 20px 20px;
-  color: #fff;
-  box-shadow: 0 2px 16px #0003;
+  color: #E1E1E1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 1px solid rgba(124,93,255,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +112,8 @@ const Card = styled.article`
 
   &:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 32px #0005;
+    box-shadow: 0 8px 32px rgba(124,93,255,0.3);
+    border-color: rgba(124,93,255,0.3);
   }
 `;
 const Imagem = styled.img`
