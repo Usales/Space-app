@@ -1,20 +1,44 @@
 import { createGlobalStyle } from 'styled-components'
 
 const EstilosGlobais = createGlobalStyle`
+* {
+  font-family: 'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   line-height: 1.15; 
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+  background-color: #0B0C1A;
+  color: #E1E1E1;
 }
 main {
   display: block;
 }
 h1 {
-  font-size: 2em;
+  font-size: 36px;
+  font-weight: 600;
   margin: 0.67em 0;
+  color: #E1E1E1;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #E1E1E1;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #E1E1E1;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #E1E1E1;
+  line-height: 1.5;
 }
 hr {
   box-sizing: content-box; 
@@ -153,6 +177,26 @@ template {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes starFlash {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
   }
 }
 `
