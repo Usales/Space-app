@@ -8,15 +8,34 @@ const HeaderEstilizado = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
 
     img{
         max-width: 212px;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 40px 0;
     }
 
     @media (max-width: 768px) {
         flex-direction: column;
         gap: 2rem;
         padding: 30px 0;
+        align-items: stretch;
+    }
+
+    @media (max-width: 480px) {
+        padding: 24px 0;
+        gap: 1.5rem;
+
+        img {
+            max-width: 160px;
+        }
     }
 `
 
