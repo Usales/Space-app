@@ -33,6 +33,22 @@ const FigureEstilizada = styled.figure`
     justify-content: center;
     width: 100%;
     min-width: 0;
+    box-sizing: border-box;
+
+    @media (max-width: 1024px) {
+        min-height: 280px;
+        border-radius: 16px;
+    }
+
+    @media (max-width: 768px) {
+        min-height: 240px;
+        border-radius: 12px;
+    }
+
+    @media (max-width: 480px) {
+        min-height: 200px;
+        border-radius: 10px;
+    }
 `;
 
 const TituloEstilizado = styled.h1`
@@ -44,9 +60,24 @@ const TituloEstilizado = styled.h1`
     padding: 0 64px;
     margin: 0;
     text-align: center;
+
+    @media (max-width: 1024px) {
+        font-size: 36px;
+        line-height: 42px;
+        padding: 0 48px;
+    }
+
     @media (max-width: 768px) {
-        padding: 0 16px;
+        padding: 0 24px;
         font-size: 28px;
+        line-height: 34px;
+        max-width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 16px;
+        font-size: 24px;
+        line-height: 30px;
     }
 `;
 
