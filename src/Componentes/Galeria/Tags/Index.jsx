@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import tags from './tags.json';
 
 const TagTituloEstilizado = styled.div`
-    color: #D9D9D9;
-    font-size: 24px;
+    color: #E1E1E1;
+    font-size: 22px;
+    font-weight: 600;
     margin: 0;
 
     @media (max-width: 768px) {
@@ -15,7 +16,7 @@ const TagTituloEstilizado = styled.div`
     }
 
     p {
-        margin: 0 0 12px 0;
+        margin: 0 0 16px 0;
     }
 `;
 
@@ -46,31 +47,33 @@ const TagsContainer = styled.div`
 `;
 
 const Tag = styled.button`
-    font-size: 24px;
-    color: #FFFFFF;
-    background: rgba(217, 217, 217, 0.3);
-    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #E1E1E1;
+    background: ${({ $ativa }) => $ativa ? '#7C5DFF' : '#1E1F2C'};
+    border-radius: 24px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 12px;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 20px;
     box-sizing: border-box;
-    border: 2px solid transparent;
+    border: 2px solid ${({ $ativa }) => $ativa ? '#7C5DFF' : 'transparent'};
     outline: none;
     white-space: nowrap;
-    ${({ $ativa }) => $ativa && `border-color: #C98CF1; background: #154580;`}
+    
     &:hover {
-        border-color: #C98CF1;
-        transform: translateY(-5px);
+        background: ${({ $ativa }) => $ativa ? '#7C5DFF' : '#2A2B3C'};
+        box-shadow: ${({ $ativa }) => $ativa ? '0 0 15px rgba(124,93,255,0.5)' : '0 0 10px rgba(124,93,255,0.3)'};
+        transform: translateY(-2px);
     }
 
     @media (max-width: 768px) {
-        font-size: 18px;
-        padding: 10px 16px;
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     @media (max-width: 480px) {
-        font-size: 16px;
-        padding: 8px 14px;
+        font-size: 13px;
+        padding: 7px 14px;
     }
 `;
 
