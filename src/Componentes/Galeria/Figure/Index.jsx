@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
 const FigureEstilizado = styled.figure`
-    width: 500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@ const FigureEstilizado = styled.figure`
         transform: translateY(-10px);
     }
 
-    @media (max-width: 400px) {
-        width: 340px;
+    @media (max-width: 768px) {
+        max-width: 100%;
     }
 `;
 
@@ -25,6 +25,17 @@ const Imagem = styled.img`
     height: 260px;
     object-fit: cover;
     cursor: pointer;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        height: 240px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    @media (max-width: 480px) {
+        height: 200px;
+        border-radius: 12px 12px 0 0;
+    }
 `;
 
 const Figcaption = styled.figcaption`
@@ -33,6 +44,16 @@ const Figcaption = styled.figcaption`
     color: white;
     box-sizing: border-box;
     padding: 12px;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 8px;
+        border-radius: 0px 0px 12px 12px;
+    }
 
     h3 {
         font-family: 'GandhiSansBold';
@@ -45,6 +66,14 @@ const Figcaption = styled.figcaption`
     h3, h4 {
         margin: 0;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 14px;
+        }
     }
 `;
 

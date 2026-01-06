@@ -6,6 +6,18 @@ const PopularesContainer = styled.div`
     flex-direction: column;
     gap: 16px;
     width: 230px;
+    min-width: 230px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        min-width: 100%;
+    }
 `;
 
 const ImagemPopular = styled.img`
@@ -18,6 +30,16 @@ const ImagemPopular = styled.img`
 
     &:hover {
         transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+        height: 180px;
+        border-radius: 16px;
+    }
+
+    @media (max-width: 480px) {
+        height: 160px;
+        border-radius: 12px;
     }
 `;
 

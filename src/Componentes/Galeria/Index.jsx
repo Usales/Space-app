@@ -8,9 +8,15 @@ const GaleriaContainer = styled.section`
   display: flex;
   gap: 24px;
   width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 12px;
   }
 `
 
@@ -38,6 +44,11 @@ const ListaFotos = styled.ul`
   width: 100%;
   justify-items: center;
   animation: slideDownFade 1.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -45,6 +56,11 @@ const ListaFotos = styled.ul`
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 12px;
   }
 `
 
