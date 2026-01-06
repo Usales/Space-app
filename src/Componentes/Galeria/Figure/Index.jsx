@@ -7,11 +7,16 @@ const FigureEstilizado = styled.figure`
     margin: 0;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
     cursor: pointer;
+    background: #1E1F2C;
 
     &:hover {
-        transform: translateY(-10px);
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(124,93,255,0.5);
     }
 
     @media (max-width: 768px) {
@@ -21,59 +26,60 @@ const FigureEstilizado = styled.figure`
 
 const Imagem = styled.img`
     max-width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 0;
     height: 260px;
     object-fit: cover;
     cursor: pointer;
     width: 100%;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    animation: fadeIn 0.6s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+    ${FigureEstilizado}:hover & {
+        filter: brightness(1.1);
+    }
 
     @media (max-width: 768px) {
         height: 240px;
-        border-radius: 16px 16px 0 0;
     }
 
     @media (max-width: 480px) {
         height: 200px;
-        border-radius: 12px 12px 0 0;
     }
 `;
 
 const Figcaption = styled.figcaption`
-    background-color: #001634;
-    border-radius: 0px 0px 20px 20px;
-    color: white;
+    background-color: #1E1F2C;
+    border-radius: 0;
+    color: #E1E1E1;
     box-sizing: border-box;
-    padding: 12px;
+    padding: 16px;
 
     @media (max-width: 768px) {
-        padding: 10px;
-        border-radius: 0px 0px 16px 16px;
+        padding: 12px;
     }
 
     @media (max-width: 480px) {
-        padding: 8px;
-        border-radius: 0px 0px 12px 12px;
+        padding: 10px;
     }
 
     h3 {
-        font-family: 'GandhiSansBold';
+        font-weight: 600;
+        font-size: 18px;
+        color: #E1E1E1;
     }
 
     h4 {
         flex-grow: 1;
+        font-weight: 400;
+        font-size: 14px;
+        color: #A0A0A0;
+        margin-top: 4px;
     }
 
     h3, h4 {
         margin: 0;
-        font-size: 16px;
-
-        @media (max-width: 768px) {
-            font-size: 15px;
-        }
-
-        @media (max-width: 480px) {
-            font-size: 14px;
-        }
     }
 `;
 
