@@ -52,32 +52,30 @@ const FigureEstilizada = styled.figure`
 `;
 
 const TituloEstilizado = styled.h1`
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
     color: #FFFFFF;
     max-width: 300px;
     padding: 0 64px;
     margin: 0;
     text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 
     @media (max-width: 1024px) {
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 2.2rem;
         padding: 0 48px;
     }
 
     @media (max-width: 768px) {
         padding: 0 24px;
-        font-size: 28px;
-        line-height: 34px;
+        font-size: 1.8rem;
         max-width: 100%;
     }
 
     @media (max-width: 480px) {
         padding: 0 16px;
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 1.5rem;
     }
 `;
 
